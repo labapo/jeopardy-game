@@ -38,6 +38,10 @@ Winner is the person who has the most points at the end will win!
 - Two classes
 1. player turn
 2. generate questions
+    question
+    answer
+    value
+    level
 
 stretches: 
 1. Have two rounds

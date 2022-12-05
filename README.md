@@ -30,7 +30,7 @@ Where I see issues-
 - timer and making sure they answer within time (set timeout )
 
 Wireframes: 
-![Wireframe-home](/Question-Wireframe.png)
+![Wireframe-home](/Scoreboard%20-%20Wireframe.png)
 ![Wireframe-questions](/Question-Wireframe.png)
 
 Build Status

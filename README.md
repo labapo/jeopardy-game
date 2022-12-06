@@ -29,6 +29,28 @@ Where I see issues-
 - how to develop different rounds
 - timer and making sure they answer within time (set timeout )
 
+
+Phases/Goals
+Day 1: Planning: 
+    - Create Wireframe
+    - Psudocode
+    - Get demo questions hard coded 
+    - Start code for "Start Game" function 
+Day 2: Long Code day: 
+    - Finish "Start Game" function
+    - Have question display on Questions page
+    - Code classes
+    - Go through player's full actions
+    - start UI
+Day 3: Code UI
+    - Test with player 2's full actions
+    - Code scoreboard
+    - Have about 10 total questions
+    - Set up databases
+Day 4: Wrap up
+    - Debug any issues
+    - Maybe have form to submit more questions
+
 Wireframes: 
 ![Wireframe-home](/Scoreboard%20-%20Wireframe.png)
 ![Wireframe-questions](/Question-Wireframe.png)

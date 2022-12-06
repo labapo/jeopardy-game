@@ -1,0 +1,10 @@
+#genre-column{
+    display: grid;
+    grid-template-columns: auto auto auto auto
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: DodgerBlue;
+}

@@ -1,10 +1,11 @@
 #genre-column{
-    display: grid;
-    grid-template-columns: auto auto auto auto
+    color: white;
+    background-color: ;
 }
 
 .flex-container {
     display: flex;
     flex-wrap: nowrap;
-    background-color: DodgerBlue;
+    background-color: black;
+    padding: 5%;
 }

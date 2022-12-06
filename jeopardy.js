@@ -59,7 +59,7 @@ const categoryBoard = document.getElementById("category-board")
 
 const jeopardyQuestions =[
     {
-        categoryName: "One",
+        categoryName: "Category One",
         questions: [
         {
             question: "What is the answer to question one? The answer is B.", 
@@ -99,7 +99,7 @@ const jeopardyQuestions =[
     ]
     },
     {
-        categoryName: "Two",
+        categoryName: "Category Two",
         questions: [
         {
             question: "What is the answer to question one? The answer is B.", 
@@ -139,7 +139,7 @@ const jeopardyQuestions =[
     ]
     }, 
     {
-        categoryName: "Three",
+        categoryName: "Category Three",
         questions: [
         {
             question: "What is the answer to question one? The answer is B.", 
@@ -179,7 +179,7 @@ const jeopardyQuestions =[
     ]
     }, 
     {
-        categoryName: "Four",
+        categoryName: "Category Four",
         questions: [
         {
             question: "What is the answer to question one? The answer is B.", 
@@ -219,7 +219,7 @@ const jeopardyQuestions =[
     ]
     }, 
     {
-        categoryName: "Five",
+        categoryName: "Category Five",
         questions: [
         {
             question: "What is the answer to question one? The answer is B.", 
@@ -261,14 +261,24 @@ const jeopardyQuestions =[
 ]
 //Add create columns from array using a for each loop
 function addCategory (category) {
+    //create categories on the board
     const column = document.createElement('div'); 
     column.classList.add("genre-column")//classlist = modify the list of classes attached to a html element
 
     const genreTitle = document.createElement('div');
     genreTitle.classList.add("genre-title")
-    genreTitle.innerText = category.categoryName
-    
+    genreTitle.innerHTML = category.categoryName
+    //show genre title on the category board
     column.appendChild(genreTitle)
     categoryBoard.append(column)
+    // //create questions
+    //     category.questions.forEach(question => {
+    //     const card = document.createElement('div')
+    //     card.classList.add('card')
+    //     categoryBoard.append(card)
+    //     if (question.level===1) {
+    //         card.innerHTML = $100
+    // }
+    // })
 }
 jeopardyQuestions.forEach(category => addCategory(category))

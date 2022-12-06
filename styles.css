@@ -1,11 +1,55 @@
-#genre-column{
-    color: white;
-    background-color: ;
+@font-face {
+    font-family: "Heebo-Regular";
+    src: url(/fonts/Heebo-Regular.ttf);
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(/jeopardy-background.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgb(255,255,255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Heebo-regular";
+}
 .flex-container {
     display: flex;
     flex-wrap: nowrap;
     background-color: black;
-    padding: 5%;
+    width: 90%;
+    border-radius: 15px;
+}
+
+.genre-title{
+    color: white;
+    text-align: center;
+    margin: auto;
+}
+
+.genre-column {
+    margin: 15px;
+    background-color: #0139C5;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    height: 100px;
+    width: 200px;
+    border-style: solid;
+    border: white;
+    border-radius: 15px;
+}
+
+.card{
+    width: 160px;
+    height: 120px;
+    background-color: rgb(26,26,255) 10px;
+    border-left: solid rgb(19,19,160) 10px;
+    border-right: solid rgb(11, 11, 91) 10px;
+    border-left: solid rgb(1, 61, 200) 10px;
+    border-left: solid rgb(20, 20, 89) 10px;
+
 }

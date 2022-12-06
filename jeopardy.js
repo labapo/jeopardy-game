@@ -86,7 +86,7 @@ const jeopardyQuestions =[
             question: "What is the answer to question one? The answer is B.", 
             answers: ["A. Incorrect choice, answer A", "B. Correct Choice. Answer B.", "C. Incorrect choice, answer C.", "D. Incorrect choice, answer D."],
             correct: "B. Correct Choice. Answer B.",
-            value: 500, 
+            value: 400, 
             level: 4
         },
         {
@@ -263,22 +263,35 @@ const jeopardyQuestions =[
 function addCategory (category) {
     //create categories on the board
     const column = document.createElement('div'); 
-    column.classList.add("genre-column")//classlist = modify the list of classes attached to a html element
+    column.classList.add("category-column")//classlist = modify the list of classes attached to a html element
 
-    const genreTitle = document.createElement('div');
-    genreTitle.classList.add("genre-title")
-    genreTitle.innerHTML = category.categoryName
+    const categoryTitle = document.createElement('div');
+    categoryTitle.classList.add("category-title")
+    categoryTitle.innerHTML = category.categoryName
     //show genre title on the category board
-    column.appendChild(genreTitle)
+    column.appendChild(categoryTitle)
     categoryBoard.append(column)
-    // //create questions
-    //     category.questions.forEach(question => {
-    //     const card = document.createElement('div')
-    //     card.classList.add('card')
-    //     categoryBoard.append(card)
-    //     if (question.level===1) {
-    //         card.innerHTML = $100
-    // }
-    // })
+    //create questions
+        category.questions.forEach(question => {
+        const card = document.createElement('div')
+        card.classList.add('card')
+        categoryBoard.append(card)
+        if (question.level===1) { 
+         card.innerHTML = 100
+        }
+        if (question.level===2) { 
+            card.innerHTML = 200
+        }
+        if (question.level===3) { 
+            card.innerHTML = 300
+           }
+        if (question.level===4) { 
+            card.innerHTML = 400
+        }
+        if (question.level===5) { 
+            card.innerHTML = 500
+           }
+        
+   })
 }
 jeopardyQuestions.forEach(category => addCategory(category))

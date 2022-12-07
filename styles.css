@@ -2,7 +2,6 @@
     font-family: "Heebo-Regular";
     src: url(/fonts/Heebo-Regular.ttf);
 }
-
 body {
     margin: 0;
     padding: 0;
@@ -16,6 +15,14 @@ body {
     flex-direction: column;
     font-family: "Heebo-regular";
 }
+.heading-div {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: black;
+    width: 90%;
+    border-radius: 15px;
+}
+
 .flex-container {
     display: flex;
     flex-wrap: nowrap;
@@ -34,7 +41,6 @@ body {
     margin: 15px;
     background-color: #0139C5;
     display: flex;
-    grid-column-gap: 10px;
     height: 100px;
     width: 200px;
     border-style: solid;
@@ -47,10 +53,36 @@ body {
 .card{
     width: 100px;
     height: auto;
+    flex-direction: column !important;
     background-color: rgb(26,26,255);
     border-left: 10px solid rgb(19,19,160);
     border-right: 10px solid rgb(11, 11, 91);
-    border-top: 10px solid rgb(1, 61, 200);
+    border-top: 10px solid rgb(42, 96, 224);
     border-bottom: 10px solid rgb(20, 20, 89);
 
 }
+.grid-background {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+    width: 90%;
+    border-radius: 15px;
+    flex-direction: column !important;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    row-gap: 10px;
+    column-gap: 30px;
+}
+
+#directions {
+    background-color: grey;
+    height: 100px;
+    width: 400px;
+    align-items: center;
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+}
+

@@ -52,8 +52,8 @@ Day 4: Wrap up
     - Maybe have form to submit more questions
 
 Wireframes: 
-![Wireframe-home](/Scoreboard%20-%20Wireframe.png)
-![Wireframe-questions](/Question-Wireframe.png)
+![Wireframe-home](/images//Scoreboard%20-%20Wireframe.png)
+![Wireframe-questions](/images//Question-Wireframe.png)
 
 Build Status
 

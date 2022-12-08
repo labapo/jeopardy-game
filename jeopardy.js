@@ -289,6 +289,17 @@ function addCategory (category) {
 }
 jeopardyQuestions.forEach(category => addCategory(category))
 
-function startFunction () {
-document.getElementById('start-game').style.color = "red";
-}
+const startButton = document.getElementById('start-game');
+const resetGameButton = document.getElementById('reset-game'); 
+startButton.addEventListener('click', (event) => {
+    //button dissapears
+    startButton.style.display = "none";
+    //start player one text in directions box
+    let startPlayerOne = "Player 1's Turn. Click on a category and value.";
+    document.getElementById("directions-text").innerHTML = startPlayerOne
+    //reset buttons appear
+    document.getElementById("reset-game-button").style.visibility="visible";
+  //startButton.innerHTML = "testing 123";
+});
+
+

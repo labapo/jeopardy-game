@@ -47,7 +47,8 @@ const playerOneName = document.getElementById("playerOneName");
 const playerOneScore = document.getElementById("playerOneScore"); 
 const playerTwoName = document.getElementById("playerTwoName"); 
 const playerTwoScore = document.getElementById("playerTwoScore"); 
-const categoryBoard = document.getElementById("category-board")
+const categoryBoard = document.getElementById("category-board");
+const displayQuestion = document.getElementById("display-questions"); 
 
 const jeopardyQuestions =[
     {
@@ -251,28 +252,30 @@ const jeopardyQuestions =[
     ]
     }
 ]
+console.log(jeopardyQuestions)
+
 //Add create columns from array using a for each loop
 function addCategory (category) {
     //create categories on the board
     const column = document.createElement('div'); 
     column.classList.add("category-column")//classlist = modify the list of classes attached to a html element
-
     const categoryTitle = document.createElement('div');
     categoryTitle.classList.add("category-title")
     categoryTitle.innerHTML = category.categoryName
     //show genre title on the category board
     column.appendChild(categoryTitle)
     categoryBoard.append(column)
-    //create questions
+    //create questions grid
         category.questions.forEach(question => {
         const card = document.createElement('div')
         card.classList.add('card')
         const questionsGrid = document.getElementById('questions-grid')
         questionsGrid.append(card)
-        //add event listeners 
-        card.addEventListener("click",()=> {
-            playerOneScore.innerText= "test"
-        })
+        // //Event listener
+        // let categoryQuestion=document.getElementsByClassName('card')
+        // card.addEventListener("click",()=> {
+        //    alert("HI")
+        //  })
         if (question.level===1) { 
          card.innerHTML = 100
         }
@@ -288,11 +291,23 @@ function addCategory (category) {
         if (question.level===5) { 
             card.innerHTML = 500
            }
-        
+        card.setAttribute("question-text", question.question);
+        card.setAttribute('correct-answer', question.correct);
+        card.setAttribute('answer-choiceA', question.answers[0]);
+        card.setAttribute('answer-choiceB', question.answers[1]);
+        card.setAttribute('answer-choiceC', question.answers[2]);
+        card.setAttribute('answer-choiceD', question.answers[3]);
+        card.setAttribute('value-amount', question.value);
+        card.setAttribute('level', question.level);
+
+        card.addEventListener("click", flipCard)
    })
 }
+
 jeopardyQuestions.forEach(category => addCategory(category))
 
+
+//Start Game and buttons
 const startButton = document.getElementById('start-game');
 const resetGameButton = document.getElementById('reset-game'); 
 startButton.addEventListener('click', (event) => {
@@ -300,10 +315,15 @@ startButton.addEventListener('click', (event) => {
     startButton.style.display = "none";
     //start player one text in directions box
     let startPlayerOne = "Player 1's Turn. Click on a category and value.";
-    document.getElementById("directions-text").innerHTML = startPlayerOne
+    document.getElementById("directions-text").innerHTML = startPlayerOne;
     //reset buttons appear
     document.getElementById("reset-game-button").style.visibility="visible";
-    //when player 1 clicks any button, it goes to a new screen where the question is displayed
+    //when player 1 clicks any button, the question displays
+    questionText = "abc 123";
+    document.getElementById('display-questions') = questionsText
+    
 });
-
-
+function flipCard (){
+    this.innerHTML = ""; 
+    const textDisplay = document.createElement('div');
+}

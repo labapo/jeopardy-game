@@ -269,6 +269,10 @@ function addCategory (category) {
         card.classList.add('card')
         const questionsGrid = document.getElementById('questions-grid')
         questionsGrid.append(card)
+        //add event listeners 
+        card.addEventListener("click",()=> {
+            playerOneScore.innerText= "test"
+        })
         if (question.level===1) { 
          card.innerHTML = 100
         }
@@ -299,7 +303,7 @@ startButton.addEventListener('click', (event) => {
     document.getElementById("directions-text").innerHTML = startPlayerOne
     //reset buttons appear
     document.getElementById("reset-game-button").style.visibility="visible";
-  //startButton.innerHTML = "testing 123";
+    //when player 1 clicks any button, it goes to a new screen where the question is displayed
 });
 
 

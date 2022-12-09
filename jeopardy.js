@@ -328,11 +328,36 @@ function showQuestionsAndChoices (){
     choiceB.innerHTML = this.getAttribute('answer-choiceB')
     choiceC.innerHTML = this.getAttribute('answer-choiceC')
     choiceD.innerHTML = this.getAttribute('answer-choiceD')
+    //
+    //choiceA.addEventListener('click', getResult)
+    //choiceB.addEventListener('click', getResult)
+    //choiceC.addEventListener('click', getResult)
+    //choiceD.addEventListener('click', getResult)
     //attach attributes to the button to display
     this.append(textDisplay, choiceA, choiceB, choiceC, choiceD)
 
     const allQuestions = Array.from(document.querySelectorAll('.card'));
     allQuestions.forEach(card => card.removeEventListener('click', showQuestionsAndChoices))
+}
+let score = 0
+function getResult () {
+    const cardOfButton = this.parentElement;
+    if (cardOfButton.getAttribute('correct-answer') == this.innerHTML) {
+        score = score + parseInt(cardOfButton.getAttribute('value-amount'))
+        scoreDisplay.innerHTML = score
+        cardOfButton.classList.add('correct-answer')
+        setTimeout(()=> {
+            while (cardOfButton.firstChild){
+                cardOfButton.removeChild(cardOfButton.lastChild)
+            } cardOfButton.innerHTML = cardOfButton.getAttribute('value-amount')
+        }, 1000)
+    } else {
+        setTimeout(()=> {
+            while (cardOfButton.firstChild){
+                cardOfButton.removeChild(cardOfButton.lastChild)
+            } cardOfButton.innerHTML = "You lose" + cardOfButton.getAttribute('value-amount')
+        }, 1000)
+    } cardOfButton.removeEventListener('click', showQuestionsAndChoices)
 }
 
 //Start Game and buttons

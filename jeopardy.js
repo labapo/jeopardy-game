@@ -95,35 +95,35 @@ const jeopardyQuestions =[
         categoryName: "Category Two",
         questions: [
         {
-            question: "What is the answer to question one? The answer is B.", 
+            question: "2What is the answer to question one? The answer is B.", 
             answers: ["A. Incorrect choice, answer A", "B. Correct Choice. Answer B.", "C. Incorrect choice, answer C.", "D. Incorrect choice, answer D."],
             correct: "B. Correct Choice. Answer B.",
             value: 100, 
             level: 1
         },
         {
-            question: "What is the answer to question one? The answer is B.", 
+            question: "2What is the answer to question one? The answer is B.", 
             answers: ["A. Incorrect choice, answer A", "B. Correct Choice. Answer B.", "C. Incorrect choice, answer C.", "D. Incorrect choice, answer D."],
             correct: "B. Correct Choice. Answer B.",
             value: 200, 
             level: 2
         }, 
         {
-            question: "What is the answer to question one? The answer is B.", 
+            question: "2What is the answer to question one? The answer is B.", 
             answers: ["A. Incorrect choice, answer A", "B. Correct Choice. Answer B.", "C. Incorrect choice, answer C.", "D. Incorrect choice, answer D."],
             correct: "B. Correct Choice. Answer B.",
             value: 300, 
             level: 3
         },
         {
-            question: "What is the answer to question one? The answer is B.", 
+            question: "2What is the answer to question one? The answer is B.", 
             answers: ["A. Incorrect choice, answer A", "B. Correct Choice. Answer B.", "C. Incorrect choice, answer C.", "D. Incorrect choice, answer D."],
             correct: "B. Correct Choice. Answer B.",
             value: 500, 
             level: 4
         },
         {
-            question: "What is the answer to question one? The answer is B.", 
+            question: "2What is the answer to question one? The answer is B.", 
             answers: ["A. Incorrect choice, answer A", "B. Correct Choice. Answer B.", "C. Incorrect choice, answer C.", "D. Incorrect choice, answer D."],
             correct: "B. Correct Choice. Answer B.",
             value: 500, 
@@ -135,35 +135,35 @@ const jeopardyQuestions =[
         categoryName: "Category Three",
         questions: [
         {
-            question: "What is the answer to question one? The answer is B.", 
+            question: "3What is the answer to question one? The answer is B.", 
             answers: ["A. Incorrect choice, answer A", "B. Correct Choice. Answer B.", "C. Incorrect choice, answer C.", "D. Incorrect choice, answer D."],
             correct: "B. Correct Choice. Answer B.",
             value: 100, 
             level: 1
         },
         {
-            question: "What is the answer to question one? The answer is B.", 
+            question: "3What is the answer to question one? The answer is B.", 
             answers: ["A. Incorrect choice, answer A", "B. Correct Choice. Answer B.", "C. Incorrect choice, answer C.", "D. Incorrect choice, answer D."],
             correct: "B. Correct Choice. Answer B.",
             value: 200, 
             level: 2
         }, 
         {
-            question: "What is the answer to question one? The answer is B.", 
+            question: "3What is the answer to question one? The answer is B.", 
             answers: ["A. Incorrect choice, answer A", "B. Correct Choice. Answer B.", "C. Incorrect choice, answer C.", "D. Incorrect choice, answer D."],
             correct: "B. Correct Choice. Answer B.",
             value: 300, 
             level: 3
         },
         {
-            question: "What is the answer to question one? The answer is B.", 
+            question: "3What is the answer to question one? The answer is B.", 
             answers: ["A. Incorrect choice, answer A", "B. Correct Choice. Answer B.", "C. Incorrect choice, answer C.", "D. Incorrect choice, answer D."],
             correct: "B. Correct Choice. Answer B.",
             value: 500, 
             level: 4
         },
         {
-            question: "What is the answer to question one? The answer is B.", 
+            question: "3What is the answer to question one? The answer is B.", 
             answers: ["A. Incorrect choice, answer A", "B. Correct Choice. Answer B.", "C. Incorrect choice, answer C.", "D. Incorrect choice, answer D."],
             correct: "B. Correct Choice. Answer B.",
             value: 500, 
@@ -175,35 +175,35 @@ const jeopardyQuestions =[
         categoryName: "Category Four",
         questions: [
         {
-            question: "What is the answer to question one? The answer is B.", 
+            question: "4What is the answer to question one? The answer is B.", 
             answers: ["A. Incorrect choice, answer A", "B. Correct Choice. Answer B.", "C. Incorrect choice, answer C.", "D. Incorrect choice, answer D."],
             correct: "B. Correct Choice. Answer B.",
             value: 100, 
             level: 1
         },
         {
-            question: "What is the answer to question one? The answer is B.", 
+            question: "4What is the answer to question one? The answer is B.", 
             answers: ["A. Incorrect choice, answer A", "B. Correct Choice. Answer B.", "C. Incorrect choice, answer C.", "D. Incorrect choice, answer D."],
             correct: "B. Correct Choice. Answer B.",
             value: 200, 
             level: 2
         }, 
         {
-            question: "What is the answer to question one? The answer is B.", 
+            question: "4What is the answer to question one? The answer is B.", 
             answers: ["A. Incorrect choice, answer A", "B. Correct Choice. Answer B.", "C. Incorrect choice, answer C.", "D. Incorrect choice, answer D."],
             correct: "B. Correct Choice. Answer B.",
             value: 300, 
             level: 3
         },
         {
-            question: "What is the answer to question one? The answer is B.", 
+            question: "4What is the answer to question one? The answer is B.", 
             answers: ["A. Incorrect choice, answer A", "B. Correct Choice. Answer B.", "C. Incorrect choice, answer C.", "D. Incorrect choice, answer D."],
             correct: "B. Correct Choice. Answer B.",
             value: 500, 
             level: 4
         },
         {
-            question: "What is the answer to question one? The answer is B.", 
+            question: "4What is the answer to question one? The answer is B.", 
             answers: ["A. Incorrect choice, answer A", "B. Correct Choice. Answer B.", "C. Incorrect choice, answer C.", "D. Incorrect choice, answer D."],
             correct: "B. Correct Choice. Answer B.",
             value: 500, 
@@ -215,35 +215,35 @@ const jeopardyQuestions =[
         categoryName: "Category Five",
         questions: [
         {
-            question: "What is the answer to question one? The answer is B.", 
+            question: "5What is the answer to question one? The answer is B.", 
             answers: ["A. Incorrect choice, answer A", "B. Correct Choice. Answer B.", "C. Incorrect choice, answer C.", "D. Incorrect choice, answer D."],
             correct: "B. Correct Choice. Answer B.",
             value: 100, 
             level: 1
         },
         {
-            question: "What is the answer to question one? The answer is B.", 
+            question: "5What is the answer to question one? The answer is B.", 
             answers: ["A. Incorrect choice, answer A", "B. Correct Choice. Answer B.", "C. Incorrect choice, answer C.", "D. Incorrect choice, answer D."],
             correct: "B. Correct Choice. Answer B.",
             value: 200, 
             level: 2
         }, 
         {
-            question: "What is the answer to question one? The answer is B.", 
+            question: "5What is the answer to question one? The answer is B.", 
             answers: ["A. Incorrect choice, answer A", "B. Correct Choice. Answer B.", "C. Incorrect choice, answer C.", "D. Incorrect choice, answer D."],
             correct: "B. Correct Choice. Answer B.",
             value: 300, 
             level: 3
         },
         {
-            question: "What is the answer to question one? The answer is B.", 
+            question: "5What is the answer to question one? The answer is B.", 
             answers: ["A. Incorrect choice, answer A", "B. Correct Choice. Answer B.", "C. Incorrect choice, answer C.", "D. Incorrect choice, answer D."],
             correct: "B. Correct Choice. Answer B.",
             value: 500, 
             level: 4
         },
         {
-            question: "What is the answer to question one? The answer is B.", 
+            question: "5What is the answer to question one? The answer is B.", 
             answers: ["A. Incorrect choice, answer A", "B. Correct Choice. Answer B.", "C. Incorrect choice, answer C.", "D. Incorrect choice, answer D."],
             correct: "B. Correct Choice. Answer B.",
             value: 500, 
@@ -253,6 +253,32 @@ const jeopardyQuestions =[
     }
 ]
 console.log(jeopardyQuestions)
+//filter to make a div of each category
+let categoryOne = jeopardyQuestions.filter(function(jeopardyQuestions) {
+    const catOne = document.createElement('div')
+    return jeopardyQuestions.categoryName === "Category One";
+});
+console.log(categoryOne);
+let categoryTwo = jeopardyQuestions.filter(function(jeopardyQuestions) {
+    const catTwo = document.createElement('div')
+    return jeopardyQuestions.categoryName === "Category Two";
+});
+console.log(categoryTwo)
+let categoryThree = jeopardyQuestions.filter(function(jeopardyQuestions) {
+    const catThree = document.createElement('div')
+    return jeopardyQuestions.categoryName === "Category Three";
+});
+console.log(categoryThree)
+let categoryFour = jeopardyQuestions.filter(function(jeopardyQuestions) {
+    const catFour = document.createElement('div')
+    return jeopardyQuestions.categoryName === "Category Four";
+});
+console.log(categoryFour)
+let categoryFive = jeopardyQuestions.filter(function(jeopardyQuestions) {
+    const catFive = document.createElement('div')
+    return jeopardyQuestions.categoryName === "Category Five";
+});
+console.log(categoryFive)
 
 //Add create columns from array using a for each loop
 function addCategory (category) {
@@ -262,6 +288,7 @@ function addCategory (category) {
     const categoryTitle = document.createElement('div');
     categoryTitle.classList.add("category-title")
     categoryTitle.innerHTML = category.categoryName
+    
     //show genre title on the category board
     column.appendChild(categoryTitle)
     categoryBoard.append(column)
@@ -299,7 +326,7 @@ function addCategory (category) {
         card.setAttribute('answer-choiceD', question.answers[3]);
         card.setAttribute('value-amount', question.value);
         card.setAttribute('level', question.level);
-
+        //categoryOne.setAttribute('id', "category-one")
         card.addEventListener("click", showQuestionsAndChoices)
    })
 }
@@ -329,10 +356,10 @@ function showQuestionsAndChoices (){
     choiceC.innerHTML = this.getAttribute('answer-choiceC')
     choiceD.innerHTML = this.getAttribute('answer-choiceD')
     //
-    //choiceA.addEventListener('click', getResult)
-    //choiceB.addEventListener('click', getResult)
-    //choiceC.addEventListener('click', getResult)
-    //choiceD.addEventListener('click', getResult)
+    choiceA.addEventListener('click', getResult)
+    choiceB.addEventListener('click', getResult)
+    choiceC.addEventListener('click', getResult)
+    choiceD.addEventListener('click', getResult)
     //attach attributes to the button to display
     this.append(textDisplay, choiceA, choiceB, choiceC, choiceD)
 
@@ -369,15 +396,17 @@ startButton.addEventListener('click', (event) => {
     //player 1 enter name
     let enterPlayerOne = prompt("Enter Player 1's Name");
     if (enterPlayerOne !=null) {
-        playerOneName.innerHTML = enterPlayerOne
+        playerOneName.innerHTML = enterPlayerOne;
     };
     //player 2 enter name
     let enterPlayerTwo = prompt("Enter Player 2's Name");
     if (enterPlayerTwo !=null) {
         playerTwoName.innerHTML = enterPlayerTwo
     };
+    //now find cards and give them an event listener
+    //then add the not being able to click on anything else once a card has been ish
     //start player one text in directions box
-    let startPlayerOne = "Player 1's Turn. Click on a category and value.";
+    let startPlayerOne = `${playerOneName} turn. Choose a category and value`;
     document.getElementById("directions-text").innerHTML = startPlayerOne;
     //reset buttons appear
     document.getElementById("reset-game-button").style.visibility="visible";

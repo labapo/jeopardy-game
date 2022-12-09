@@ -41,6 +41,7 @@ body {
     margin: 15px;
     background-color: #0139C5;
     display: flex;
+    flex-direction: column;
     height: 100px;
     width: 200px;
     border-style: solid;
@@ -67,7 +68,7 @@ body {
     background-color: black;
     width: 90%;
     border-radius: 15px;
-    flex-direction: column !important;
+    flex-direction: row !important;
     align-content: center;
     justify-content: center;
     align-items: center;

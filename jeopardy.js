@@ -300,35 +300,36 @@ function addCategory (category) {
         card.setAttribute('value-amount', question.value);
         card.setAttribute('level', question.level);
 
-        card.addEventListener("click", flipCard)
+        card.addEventListener("click", showQuestionsAndChoices)
    })
 }
 
 jeopardyQuestions.forEach(category => addCategory(category))
 
-function flipCard (){
+function showQuestionsAndChoices (){
+    //creates a string
     this.innerHTML = ""; 
+    //create a div and give it a class of card-text
     const textDisplay = document.createElement('div');
     textDisplay.classList.add('card-text');
-    
+    //create buttons for each answer choice
      const choiceA = document.createElement('button');
      const choiceB = document.createElement('button');
      const choiceC = document.createElement('button');
      const choiceD = document.createElement('button');
-
+    // add a class to each answer choice
      choiceA.classList.add('choice-a')
      choiceB.classList.add('choice-b')
      choiceC.classList.add('choice-c')
      choiceD.classList.add('choice-d')
-
+    //display question and answer choices
     textDisplay.innerHTML = this.getAttribute("question-text")
     choiceA.innerHTML = this.getAttribute('answer-choiceA')
     choiceB.innerHTML = this.getAttribute('answer-choiceB')
     choiceC.innerHTML = this.getAttribute('answer-choiceC')
     choiceD.innerHTML = this.getAttribute('answer-choiceD')
-    
+    //attach attributes to the button to display
     this.append(textDisplay, choiceA, choiceB, choiceC, choiceD)
-
 }
 
 //Start Game and buttons
@@ -347,4 +348,3 @@ startButton.addEventListener('click', (event) => {
     document.getElementById('display-questions') = questionsText
     
 });
- 

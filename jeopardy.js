@@ -330,6 +330,9 @@ function showQuestionsAndChoices (){
     choiceD.innerHTML = this.getAttribute('answer-choiceD')
     //attach attributes to the button to display
     this.append(textDisplay, choiceA, choiceB, choiceC, choiceD)
+
+    const allQuestions = Array.from(document.querySelectorAll('.card'));
+    allQuestions.forEach(card => card.removeEventListener('click', showQuestionsAndChoices))
 }
 
 //Start Game and buttons
@@ -355,3 +358,6 @@ startButton.addEventListener('click', (event) => {
     document.getElementById("reset-game-button").style.visibility="visible";
     
 });
+
+
+

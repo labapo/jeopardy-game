@@ -338,13 +338,20 @@ const resetGameButton = document.getElementById('reset-game');
 startButton.addEventListener('click', (event) => {
     //button dissapears
     startButton.style.display = "none";
+    //player 1 enter name
+    let enterPlayerOne = prompt("Enter Player 1's Name");
+    if (enterPlayerOne !=null) {
+        playerOneName.innerHTML = enterPlayerOne
+    };
+    //player 2 enter name
+    let enterPlayerTwo = prompt("Enter Player 2's Name");
+    if (enterPlayerTwo !=null) {
+        playerTwoName.innerHTML = enterPlayerTwo
+    };
     //start player one text in directions box
     let startPlayerOne = "Player 1's Turn. Click on a category and value.";
     document.getElementById("directions-text").innerHTML = startPlayerOne;
     //reset buttons appear
     document.getElementById("reset-game-button").style.visibility="visible";
-    //when player 1 clicks any button, the question displays
-    questionText = "abc 123";
-    document.getElementById('display-questions') = questionsText
     
 });

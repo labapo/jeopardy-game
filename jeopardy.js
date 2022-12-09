@@ -306,6 +306,30 @@ function addCategory (category) {
 
 jeopardyQuestions.forEach(category => addCategory(category))
 
+function flipCard (){
+    this.innerHTML = ""; 
+    const textDisplay = document.createElement('div');
+    textDisplay.classList.add('card-text');
+    
+     const choiceA = document.createElement('button');
+     const choiceB = document.createElement('button');
+     const choiceC = document.createElement('button');
+     const choiceD = document.createElement('button');
+
+     choiceA.classList.add('choice-a')
+     choiceB.classList.add('choice-b')
+     choiceC.classList.add('choice-c')
+     choiceD.classList.add('choice-d')
+
+    textDisplay.innerHTML = this.getAttribute("question-text")
+    choiceA.innerHTML = this.getAttribute('answer-choiceA')
+    choiceB.innerHTML = this.getAttribute('answer-choiceB')
+    choiceC.innerHTML = this.getAttribute('answer-choiceC')
+    choiceD.innerHTML = this.getAttribute('answer-choiceD')
+    
+    this.append(textDisplay, choiceA, choiceB, choiceC, choiceD)
+
+}
 
 //Start Game and buttons
 const startButton = document.getElementById('start-game');
@@ -323,7 +347,4 @@ startButton.addEventListener('click', (event) => {
     document.getElementById('display-questions') = questionsText
     
 });
-function flipCard (){
-    this.innerHTML = ""; 
-    const textDisplay = document.createElement('div');
-}
+ 

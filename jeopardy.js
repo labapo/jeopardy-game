@@ -50,6 +50,12 @@ const playerTwoScore = document.getElementById("playerTwoScore");
 const categoryBoard = document.getElementById("category-board");
 const displayQuestion = document.getElementById("display-questions"); 
 
+const cat1 = document.getElementById('cat1')
+const cat2 = document.getElementById('cat2')
+const cat3 = document.getElementById('cat3')
+const cat4 = document.getElementById('cat4')
+const cat5 = document.getElementById('cat5')
+
 const jeopardyQuestions =[
     {
         categoryName: "Category One",

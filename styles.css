@@ -20,7 +20,8 @@ body {
     flex-wrap: nowrap;
     background-color: black;
     width: 90%;
-    border-radius: 15px;
+    border-top-left-radius: 15px;
+    border-top-left-radius: 15px;
 }
 
 .flex-container {
@@ -28,7 +29,7 @@ body {
     flex-wrap: nowrap;
     background-color: black;
     width: 90%;
-    border-radius: 15px;
+    border-bottom-left-radius: 15px;
 }
 
 .category-title{
@@ -63,11 +64,13 @@ body {
 
 }
 .grid-background {
-    display: grid;
-    grid-template-columns: auto auto auto auto auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     background-color: black;
     width: 90%;
-    border-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
     flex-direction: row !important;
     align-content: center;
     justify-content: center;

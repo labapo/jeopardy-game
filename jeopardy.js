@@ -294,7 +294,6 @@ function addCategory (category) {
     const categoryTitle = document.createElement('div');
     categoryTitle.classList.add("category-title")
     categoryTitle.innerHTML = category.categoryName
-    
     //show genre title on the category board
     column.appendChild(categoryTitle)
     categoryBoard.append(column)
@@ -302,8 +301,9 @@ function addCategory (category) {
         category.questions.forEach(question => {
         const card = document.createElement('div')
         card.classList.add('card')
-        const questionsGrid = document.getElementById('questions-grid')
-        questionsGrid.append(card)
+        column.append(card)
+        //const questionsGrid = document.getElementById('questions-grid')
+        //questionsGrid.append(card)
         // //Event listener
         // let categoryQuestion=document.getElementsByClassName('card')
         // card.addEventListener("click",()=> {
@@ -403,7 +403,7 @@ startButton.addEventListener('click', (event) => {
     let enterPlayerOne = prompt("Enter Player 1's Name");
     if (enterPlayerOne !=null) {
         playerOneName.innerHTML = enterPlayerOne;
-    };
+    }
     //player 2 enter name
     let enterPlayerTwo = prompt("Enter Player 2's Name");
     if (enterPlayerTwo !=null) {
@@ -412,7 +412,7 @@ startButton.addEventListener('click', (event) => {
     //now find cards and give them an event listener
     //then add the not being able to click on anything else once a card has been ish
     //start player one text in directions box
-    let startPlayerOne = `${playerOneName} turn. Choose a category and value`;
+    let startPlayerOne = `${playerOneName.innerText} turn. Choose a category and value`;
     document.getElementById("directions-text").innerHTML = startPlayerOne;
     //reset buttons appear
     document.getElementById("reset-game-button").style.visibility="visible";

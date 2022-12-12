@@ -306,10 +306,6 @@ function addCategory (category) {
         column.append(card)
         card.addEventListener ('click', function(){
             this.requestFullscreen();
-            const exitFull = document.createElement('button')
-            exitFullscreen.addEventListener('click', function (){
-                document.fullscreenElement.exitFullscreen();
-            })
         });
         if (question.level===1) { 
          card.innerHTML = 100
@@ -367,10 +363,10 @@ function showQuestionsAndChoices (){
     choiceC.innerHTML = this.getAttribute('answer-choicec')
     choiceD.innerHTML = this.getAttribute('answer-choiced')
     //
-    choiceA.addEventListener('click', getResult)
-    choiceB.addEventListener('click', getResult)
-    choiceC.addEventListener('click', getResult)
-    choiceD.addEventListener('click', getResult)
+    choiceA.addEventListener('click', getResult1)
+    choiceB.addEventListener('click', getResult1)
+    choiceC.addEventListener('click', getResult1)
+    choiceD.addEventListener('click', getResult1)
 
     //attach attributes to the button to display
     this.append(textDisplay, choiceA, choiceB, choiceC, choiceD)
@@ -380,26 +376,53 @@ function showQuestionsAndChoices (){
 }    
 
 
-let score = 0
-function getResult () {
+let playerOneTurn = 0
+let playerTwoTurn = 0
+function getResult1 () {
+    const allCards = Array.from(document.querySelectorAll('.card'))
+    allCards.forEach(card => card.addEventListener('click', showQuestionsAndChoices))
     const cardOfButton = this.parentElement;
-    if (cardOfButton.getAttribute('correct-answer') == this.innerHTML) {
-        score = score + parseInt(cardOfButton.getAttribute('value-amount'))
-        scoreDisplay.innerHTML = score
-        cardOfButton.classList.add('correct-answer')
+    if (cardOfButton.getAttribute('correct-answer') === this.innerHTML) {
+        // score = score + parseInt(cardOfButton.getAttribute('value-amount'))
+        // scoreDisplay.innerHTML = score
+        // cardOfButton.classList.add('correct-answer')
+        playerOneTurn = playerOneTurn + parseInt(cardOfButton.getAttribute('value-amount'))
+        console.log(playerOneTurn)
         setTimeout(()=> {
             while (cardOfButton.firstChild){
                 cardOfButton.removeChild(cardOfButton.lastChild)
-            } cardOfButton.innerHTML = cardOfButton.getAttribute('value-amount')
-        }, 1000)
+            } cardOfButton.innerHTML = "You received " +cardOfButton.getAttribute('value-amount') + " points!"; 
+        }, 100)
+        setTimeout (()=>{
+            exitFullScreen()
+        }, 2000)
+        playerOneScore.innerHTML = playerOneTurn
     } else {
+        playerOneTurn = playerOneTurn - parseInt(cardOfButton.getAttribute('value-amount'))
+        console.log(playerOneTurn)
         setTimeout(()=> {
             while (cardOfButton.firstChild){
                 cardOfButton.removeChild(cardOfButton.lastChild)
-            } cardOfButton.innerHTML = "You lost " + cardOfButton.getAttribute('value-amount') + " points"
-        }, 1000)
-    } cardOfButton.removeEventListener('click', showQuestionsAndChoices)
+            } cardOfButton.innerHTML = "You lost " + cardOfButton.getAttribute('value-amount') + " points";
+        }, 100)
+        setTimeout (()=>{
+            exitFullScreen()
+        }, 2000) 
+        allCards.exitFullscreen();
+    }
+    cardOfButton.removeEventListener('click', showQuestionsAndChoices)
 }
+
+function exitFullScreen() {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if (document.mozCancelFullScreen) {
+      document.mozCancelFullScreen();
+    } else if (document.webkitExitFullscreen) {
+      document.webkitExitFullscreen();
+    }
+  }
+  
 
 //Start Game and buttons
 const startButton = document.getElementById('start-game');
@@ -417,8 +440,6 @@ startButton.addEventListener('click', (event) => {
     if (enterPlayerTwo !=null) {
         playerTwoName.innerHTML = enterPlayerTwo
     };
-    //now find cards and give them an event listener
-    //then add the not being able to click on anything else once a card has been ish
     //start player one text in directions box
     let startPlayerOne = `${playerOneName.innerText}'s turn. Choose a category and value`;
     document.getElementById("directions-text").innerHTML = startPlayerOne;

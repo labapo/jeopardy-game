@@ -14,12 +14,25 @@ body {
     align-items: center;
     font-family: "Heebo-regular";
 }
+
+#jeopardy-title {
+    display: grid;
+    margin: 0;
+    padding: 0%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
 .heading-div {
     display: flex;
     flex-direction: row;
     background-color: black;
     width: 90%;
     border-radius: 3%;
+    border-top: 5px solid whitesmoke;
+    border-bottom: 5px solid whitesmoke ;
+    border-left:5px solid whitesmoke ;
+    border-right:5px solid whitesmoke ;
 }
 
 .grid-background {

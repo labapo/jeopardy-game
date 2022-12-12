@@ -75,11 +75,12 @@ body {
 }
 
 .card{
+    align-items: center;
+    justify-content: center;
     margin-top: 20px;
     display: grid;
     width: auto;
     height: auto;
-    flex-direction: row-reverse;
     background-color: rgb(26,26,255);
     border-left: 10px solid rgb(19,19,160);
     border-right: 10px solid rgb(11, 11, 91);
@@ -118,6 +119,12 @@ body {
     height: 100px;
 }
 
+.choice-a:fullscreen {
+    background-color: rgb(204, 204, 227);
+    color: white;
+    height: 100px;
+}
+
 .choice-b {
     background-color: rgb(30, 30, 247);
     color: white;
@@ -133,6 +140,15 @@ body {
     background-color: rgb(87, 87, 248);
     color: white;
     height: 100px;
+}
+
+div.card:fullscreen {
+    background-image: url(/images/jeopardy-question-background.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 60;
+    grid-row-gap: 10px;
+    border: 0px;
 }
 
 

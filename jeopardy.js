@@ -125,7 +125,7 @@ const jeopardyQuestions =[
             question: "2What is the answer to question one? The answer is B.", 
             answers: ["A. Incorrect choice, answer A", "B. Correct Choice. Answer B.", "C. Incorrect choice, answer C.", "D. Incorrect choice, answer D."],
             correct: "B. Correct Choice. Answer B.",
-            value: 500, 
+            value: 400, 
             level: 4
         },
         {
@@ -165,7 +165,7 @@ const jeopardyQuestions =[
             question: "3What is the answer to question one? The answer is B.", 
             answers: ["A. Incorrect choice, answer A", "B. Correct Choice. Answer B.", "C. Incorrect choice, answer C.", "D. Incorrect choice, answer D."],
             correct: "B. Correct Choice. Answer B.",
-            value: 500, 
+            value: 400, 
             level: 4
         },
         {
@@ -205,7 +205,7 @@ const jeopardyQuestions =[
             question: "4What is the answer to question one? The answer is B.", 
             answers: ["A. Incorrect choice, answer A", "B. Correct Choice. Answer B.", "C. Incorrect choice, answer C.", "D. Incorrect choice, answer D."],
             correct: "B. Correct Choice. Answer B.",
-            value: 500, 
+            value: 400, 
             level: 4
         },
         {
@@ -245,7 +245,7 @@ const jeopardyQuestions =[
             question: "5What is the answer to question one? The answer is B.", 
             answers: ["A. Incorrect choice, answer A", "B. Correct Choice. Answer B.", "C. Incorrect choice, answer C.", "D. Incorrect choice, answer D."],
             correct: "B. Correct Choice. Answer B.",
-            value: 500, 
+            value: 400, 
             level: 4
         },
         {
@@ -408,7 +408,7 @@ function getResult1 () {
         setTimeout (()=>{
             exitFullScreen()
         }, 2000) 
-        allCards.exitFullscreen();
+        playerOneScore.innerHTML = playerOneTurn
     }
     cardOfButton.removeEventListener('click', showQuestionsAndChoices)
 }

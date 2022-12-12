@@ -286,6 +286,7 @@ let categoryFive = jeopardyQuestions.filter(function(jeopardyQuestions) {
 });
 console.log(categoryFive)
 
+
 //Add create columns from array using a for each loop
 function addCategory (category) {
     //create categories on the board
@@ -301,14 +302,9 @@ function addCategory (category) {
         category.questions.forEach(question => {
         const card = document.createElement('div')
         card.classList.add('card')
+        card.classList.add('hide-card')
         column.append(card)
-        //const questionsGrid = document.getElementById('questions-grid')
-        //questionsGrid.append(card)
-        // //Event listener
-        // let categoryQuestion=document.getElementsByClassName('card')
-        // card.addEventListener("click",()=> {
-        //    alert("HI")
-        //  })
+        
         if (question.level===1) { 
          card.innerHTML = 100
         }
@@ -332,14 +328,17 @@ function addCategory (category) {
         card.setAttribute('answer-choiceD', question.answers[3]);
         card.setAttribute('value-amount', question.value);
         card.setAttribute('level', question.level);
-        //categoryOne.setAttribute('id', "category-one")
         card.addEventListener("click", showQuestionsAndChoices)
-   })
+    })
 }
-
 jeopardyQuestions.forEach(category => addCategory(category))
 
 function showQuestionsAndChoices (){
+    //card.disabled = true
+    // startButton().then(() => {
+    //     // When the function has finished running, enable the button
+    //     card.disabled = false;
+    //   });
     //creates a string
     this.innerHTML = ""; 
     //create a div and give it a class of card-text
@@ -357,67 +356,71 @@ function showQuestionsAndChoices (){
      choiceD.classList.add('choice-d')
     //display question and answer choices
     textDisplay.innerHTML = this.getAttribute("question-text")
-    choiceA.innerHTML = this.getAttribute('answer-choiceA')
-    choiceB.innerHTML = this.getAttribute('answer-choiceB')
-    choiceC.innerHTML = this.getAttribute('answer-choiceC')
-    choiceD.innerHTML = this.getAttribute('answer-choiceD')
+    choiceA.innerHTML = this.getAttribute('answer-choicea')
+    choiceB.innerHTML = this.getAttribute('answer-choiceb')
+    choiceC.innerHTML = this.getAttribute('answer-choicec')
+    choiceD.innerHTML = this.getAttribute('answer-choiced')
     //
     choiceA.addEventListener('click', getResult)
     choiceB.addEventListener('click', getResult)
     choiceC.addEventListener('click', getResult)
     choiceD.addEventListener('click', getResult)
+
     //attach attributes to the button to display
     this.append(textDisplay, choiceA, choiceB, choiceC, choiceD)
 
     const allQuestions = Array.from(document.querySelectorAll('.card'));
+    allQuestions.addEventListener('click', ()=> {
+        myElement.requestFullscreen();
+    });
     allQuestions.forEach(card => card.removeEventListener('click', showQuestionsAndChoices))
-}
-let score = 0
-function getResult () {
-    const cardOfButton = this.parentElement;
-    if (cardOfButton.getAttribute('correct-answer') == this.innerHTML) {
-        score = score + parseInt(cardOfButton.getAttribute('value-amount'))
-        scoreDisplay.innerHTML = score
-        cardOfButton.classList.add('correct-answer')
-        setTimeout(()=> {
-            while (cardOfButton.firstChild){
-                cardOfButton.removeChild(cardOfButton.lastChild)
-            } cardOfButton.innerHTML = cardOfButton.getAttribute('value-amount')
-        }, 1000)
-    } else {
-        setTimeout(()=> {
-            while (cardOfButton.firstChild){
-                cardOfButton.removeChild(cardOfButton.lastChild)
-            } cardOfButton.innerHTML = "You lose" + cardOfButton.getAttribute('value-amount')
-        }, 1000)
-    } cardOfButton.removeEventListener('click', showQuestionsAndChoices)
-}
-
-//Start Game and buttons
-const startButton = document.getElementById('start-game');
-const resetGameButton = document.getElementById('reset-game'); 
-startButton.addEventListener('click', (event) => {
-    //button dissapears
-    startButton.style.display = "none";
-    //player 1 enter name
-    let enterPlayerOne = prompt("Enter Player 1's Name");
-    if (enterPlayerOne !=null) {
-        playerOneName.innerHTML = enterPlayerOne;
-    }
-    //player 2 enter name
-    let enterPlayerTwo = prompt("Enter Player 2's Name");
-    if (enterPlayerTwo !=null) {
-        playerTwoName.innerHTML = enterPlayerTwo
-    };
-    //now find cards and give them an event listener
-    //then add the not being able to click on anything else once a card has been ish
-    //start player one text in directions box
-    let startPlayerOne = `${playerOneName.innerText} turn. Choose a category and value`;
-    document.getElementById("directions-text").innerHTML = startPlayerOne;
-    //reset buttons appear
-    document.getElementById("reset-game-button").style.visibility="visible";
-    
-});
+}    
 
 
 
+
+// let score = 0
+// function getResult () {
+//     const cardOfButton = this.parentElement;
+//     if (cardOfButton.getAttribute('correct-answer') == this.innerHTML) {
+//         score = score + parseInt(cardOfButton.getAttribute('value-amount'))
+//         scoreDisplay.innerHTML = score
+//         cardOfButton.classList.add('correct-answer')
+//         setTimeout(()=> {
+//             while (cardOfButton.firstChild){
+//                 cardOfButton.removeChild(cardOfButton.lastChild)
+//             } cardOfButton.innerHTML = cardOfButton.getAttribute('value-amount')
+//         }, 1000)
+//     } else {
+//         setTimeout(()=> {
+//             while (cardOfButton.firstChild){
+//                 cardOfButton.removeChild(cardOfButton.lastChild)
+//             } cardOfButton.innerHTML = "You lost " + cardOfButton.getAttribute('value-amount') + " points"
+//         }, 1000)
+//     } cardOfButton.removeEventListener('click', showQuestionsAndChoices)
+// }
+
+// //Start Game and buttons
+// const startButton = document.getElementById('start-game');
+// const resetGameButton = document.getElementById('reset-game'); 
+// startButton.addEventListener('click', (event) => {
+//     //button dissapears
+//     startButton.style.display = "none";
+//     //player 1 enter name
+//     let enterPlayerOne = prompt("Enter Player 1's Name");
+//     if (enterPlayerOne !=null) {
+//         playerOneName.innerHTML = enterPlayerOne;
+//     }
+//     //player 2 enter name
+//     let enterPlayerTwo = prompt("Enter Player 2's Name");
+//     if (enterPlayerTwo !=null) {
+//         playerTwoName.innerHTML = enterPlayerTwo
+//     };
+//     //now find cards and give them an event listener
+//     //then add the not being able to click on anything else once a card has been ish
+//     //start player one text in directions box
+//     let startPlayerOne = `${playerOneName.innerText}'s turn. Choose a category and value`;
+//     document.getElementById("directions-text").innerHTML = startPlayerOne;
+//     //reset buttons appear
+//     document.getElementById("reset-game-button").style.visibility="visible";
+//   });

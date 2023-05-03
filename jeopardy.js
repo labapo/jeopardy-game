@@ -622,11 +622,11 @@ startButton.addEventListener("click", (event) => {
   console.log(enterPlayerOne);
   let enterPlayerTwo = new Player();
   //player 2 enter name
-  enterPlayerTwo = prompt("Enter Player 2's Name");
-  if (enterPlayerTwo != null) {
-    playerTwoName.innerHTML = enterPlayerTwo;
-  }
-  console.log(enterPlayerTwo);
+//   enterPlayerTwo = prompt("Enter Player 2's Name");
+//   if (enterPlayerTwo != null) {
+//     playerTwoName.innerHTML = enterPlayerTwo;
+//   }
+//   console.log(enterPlayerTwo);
   //start player one text in directions box
   let startPlayerOne = `${playerOneName.innerText}'s turn. Choose a category and value`;
   document.getElementById("directions-text").innerHTML = startPlayerOne;
